@@ -1,0 +1,23 @@
+# core pipeline
+polars>=1.20
+numpy
+pyarrow
+scipy
+geopandas
+shapely>=2.0
+pyproj
+rasterio
+matplotlib
+requests
+orjson            # optional: 2-5x faster OSRM /table parsing
+
+# panel build (scripts/tdlinx)
+fastexcel         # polars.read_excel backend
+geopy             # geocoding fallback (Nominatim)
+
+# regressions (scripts/tdlinx/metrics.py)
+pandas
+linearmodels
+
+# tests
+pytest

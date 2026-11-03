@@ -1,0 +1,44 @@
+# Actor table: decisions about firms that the name rules in cleaning.py cannot make.
+# Format and semantics: docs/actors.md. First matching row wins, in file order.
+# status: confirmed (decided) | proposed (applied, awaiting review) | open (NOT applied)
+# Drafted 2026-10-27 from scripts/audit_actors.py on the 2014-2025 panel; VKFL figures in notes are store-year sums.
+id,field,value,relation,src,year_from,year_to,gruppe,chain,status,note
+# --- Edeka banners that do not contain the word "Edeka" (audit section 4) ---
+E01,Banner,E-center,,,,,Edeka,,proposed,"17.9M m2; today Edeka via buying centre, a few stores Stroetmann/Lüning. Edeka banner licence = Edeka"
+E02,Banner,E-aktiv Markt,,,,,Edeka,,proposed,"3.9M m2; a few stores via Stroetmann"
+E03,Banner,E-neukauf,,,,,Edeka,,proposed,2.8M m2
+E04,Banner,E xpress,,,,,Edeka,,proposed,"one store via Stroetmann"
+E05,Banner,Diska,,,,,Edeka,,proposed,"Edeka Nordbayern discount banner; some store-years gated as supplied"
+E06,Banner,Treff 3000,,,,,Edeka,,proposed,Edeka discount banner (discontinued)
+E07,Banner,Feneberg,,,,,Edeka,,confirmed,"buying-group member: Edeka in all years (Ilias' rule), not own firm 2014-2018"
+E08,Gruppe,Feneberg,,,,,Edeka,,confirmed,same firm reached through the buying centre
+# --- one firm, several labels (audit sections 3 and 6) ---
+F01,Gruppe,Mein Real,,,,,Real,,proposed,"SCP's successor brand 2022-2023; same firm as Real after 2020"
+F02,Gruppe,Mix Markt,,,,,Monolith,,proposed,Mix Markt is Monolith's banner
+F03,Gruppe,Monolith,,,,,Monolith,,proposed,
+F04,Gruppe,Supermärkte Nord,,,2017,2017,Rewe,,proposed,"Rewe vehicle for the Sky takeover; appears in 2017 only"
+# --- decisions for Ilias: listed, not applied until status is changed ---
+O01,Banner,Hit,,,,,Dohle,,open,"Hit is Dohle's banner; 7 merchant buying centres today (Jaeger, Gompelmann, ...). Dohle like Edeka merchants?"
+O02,Gruppe,Hit,,,,,Dohle,,open,goes with O01
+O03,Banner,Budni,,,,,Budnikowsky,,open,"today Budnikowsky / Edeka (Edeka supplies and holds a stake). Own firm or Edeka?"
+O04,Banner,Budnikowsky,,,,,Budnikowsky,,open,goes with O03
+O05,Banner,Konsum Leipzig,,,,,Konsum Leipzig,,open,"independent co-operative supplied by Edeka; today Edeka via buying centre (Regie, so not gated)"
+O06,Banner,Cap,,,,,independent,,open,"integration markets of social enterprises, supplied by Edeka / Stroetmann"
+# --- wholesalers: their independent customers are no firm's (audit section 3) ---
+# Only where the group came from the buying centre (src=hz) and the store is run
+# by a merchant (Selbständig). The wholesaler's own stores (Regie) keep it as Gruppe.
+W01,Gruppe,Okle,Selbständig,hz,,,independent,,proposed,"'Ihre Kette', 'Landmarkt' merchants"
+W02,Gruppe,Utz,Selbständig,hz,,,independent,,proposed,"'Um's Eck', 'Tante-m' merchants"
+W03,Gruppe,Graf,Selbständig,hz,,,independent,,proposed,
+W04,Gruppe,Gutkauf,Selbständig,hz,,,independent,,proposed,
+W05,Gruppe,LHG Eibelstadt,Selbständig,hz,,,independent,,proposed,
+W06,Gruppe,Rau,Selbständig,hz,,,independent,,proposed,
+W07,Gruppe,Cames,Selbständig,hz,,,independent,,proposed,
+W08,Gruppe,Lekkerland,Selbständig,hz,,,independent,,proposed,
+W09,Gruppe,Lüning,Selbständig,hz,,,independent,,proposed,"'Ihr Frischmarkt' merchants"
+W10,Gruppe,Stroetmann,Selbständig,hz,,,independent,,proposed,
+W11,Gruppe,Gulden & Schmidt,Selbständig,hz,,,independent,,proposed,
+W12,Gruppe,Bartels-Langness,Selbständig,hz,,,independent,,proposed,"'Markant', 'IK', 'Ihre Kette' merchants; famila/combi stores keep the group (banner)"
+W13,Gruppe,Bünting,Selbständig,hz,,,independent,,proposed,"'Markant', 'Ihre Kette' merchants"
+W14,Gruppe,Weiling,Selbständig,hz,,,independent,,proposed,organic wholesaler; 'Bioladen' merchants
+W15,Gruppe,DroNova,Selbständig,hz,,,independent,,proposed,drugstore purchasing co-operative ('Ihr Platz')
